@@ -24,8 +24,8 @@ inThisBuild(
     resolvers += Resolver.sonatypeRepo("snapshots"),
     scmInfo := Some(
       ScmInfo(
-        url("https://github.com/scafi/scafi-web"),
-        "scm:git:git@github.org:scafi/scafi-web.git"
+        url("https://github.com/scafi/ScaFi-Blocks-Web"),
+        "scm:git:git@github.org:scafi/ScaFi-Blocks-Web.git"
       )
     ),
     developers := List(
@@ -70,7 +70,7 @@ lazy val noPublishSettings = Seq(
   publishLocal := {}
 )
 
-lazy val `scafi-web` = project
+lazy val `scafi-blocks-web` = project
   .in(file("."))
   .enablePlugins(ScalaUnidocPlugin)
   .aggregate(`online-compiler`)
