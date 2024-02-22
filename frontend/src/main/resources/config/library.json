@@ -252,7 +252,7 @@
         "name": "LEADER"
       }
     ],
-    "colour": 20,
+    "colour": 230,
     "tooltip": "Sink towards a leader",
     "helpUrl": "",
     "output": null
@@ -266,7 +266,7 @@
         "name": "LEADER"
       }
     ],
-    "colour": 20,
+    "colour": 230,
     "tooltip": "Spin around a leader",
     "helpUrl": "",
     "output": null
@@ -280,7 +280,7 @@
         "name": "LEADER"
       }
     ],
-    "colour": 20,
+    "colour": 230,
     "tooltip": "Forming a line wrt a leader",
     "helpUrl": "",
     "output": null
@@ -294,7 +294,7 @@
         "name": "LEADER"
       }
     ],
-    "colour": 20,
+    "colour": 230,
     "tooltip": "Forming a circle wrt a leader",
     "helpUrl": "",
     "output": null

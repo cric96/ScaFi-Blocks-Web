@@ -32,7 +32,7 @@ object Index {
     GridLikeNetwork(7, 7, 40, 40, 10),
     SpatialRadius(range = 70),
     deviceShape = DeviceConfiguration.standard,
-    seed = SimulationSeeds()
+    seed = SimulationSeeds(7, 7, 7)
   )
 
   val updateTime = 50 // todo think to put into a configuration
