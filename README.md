@@ -1,43 +1,74 @@
-# ScaFi Web #
-[![DOI](https://zenodo.org/badge/340867650.svg)](https://zenodo.org/badge/latestdoi/340867650)
+# ScaFi Web Blocks README
 
-[Demo](https://youtu.be/E-EoFmm5tuc)
+## Overview
 
-[Site](https://scafi.github.io/web/)
+ScaFi Web Blocks is an online playground designed to facilitate agile experimentation with ScaFi using block programming. ScaFi itself is a framework that enables the writing of aggregated code in an intuitive and agile manner. This platform aims to lower the learning curve for mastering this programming paradigm by leveraging block programming, particularly Blockly.
 
-ScaFi Web is an online playground by which is possible to experiment with ScaFi, a modern Scala toolchain for Aggregate Programming.
-This project is highly inspired by ScalaFiddle and currently is under development, so both API and functionality are unstable.
+The project consists of two main parts:
+- A web page, which includes ScaFi Web and ScaFi Blocks for more detailed information.
+- A remote compilation service that translates ScaFi code into executable JavaScript.
 
-This project is composed of two-part:
-- a web page: developed using Scala.js, Phaser and scala-js-dom
-- a remote compilation service: inspired by ScalaFiddle, it compiles remote ScaFi scripts.
+## Getting Started
 
-## How to launch ScaFi-Web locally
-ScaFi web can be easily deployed locally, using both sbt and docker
-### sbt
-In the root directory, type:
+### Launching the Project
+
+There are two ways to launch the project: by compiling and running it locally or by using Docker. We recommend the latter for ease of setup.
+
+#### Using Docker
+
+To run the project using Docker, execute the following command:
+
 ```
-sbt
-project online-compiler
-compile
-run
-```
-ScaFi web currently works only in JDK 8. So if you use a Java environment manager (like Jabba), switch to the right version before trying to launch it.
-### docker
-Using the latest image from [here](https://hub.docker.com/r/gianlucaaguzzi/scafi-web/tags) type:
-```
-docker run -t -p 8080:8080 gianlucaaguzzi/scafi-web:latest
+docker run -d -p 8080:8080 gianlucaaguzzi:scafi-blocks:latest
 ```
 
-## Preliminary support of ScaFi.js
-ScaFi web supports also a Javascript dialect of ScaFi but currently is not mature enough to be part of the page.
-If you want to experiment with it, it is possible to use with: https://scafi.github.io/web/?javascript
-Main differences:
+#### Using SBT
+
+If you prefer to compile the project locally, ensure you have the following requirements:
+
+- Node 16
+- JDK 8
+
+Then, execute the following command in your terminal:
+
 ```
-// rep
-ScaFi: rep(init){value => ... }
-ScaFi.js: return rep(() => init, value => ...)
-// foldhood
-ScaFi: foldhood(init)((acc, value) => ...)(nbr(...))
-ScaFi.js: return foldhood(() => init), (acc, value) => ..., nbr(() => ...))
+sbt runService
 ```
+
+This command compiles the system, producing the web page and the compilation server.
+
+In both cases, you should be able to access the project's main page.
+
+### Playing with the Tools
+
+The web page is organized as follows:
+
+- On the left, you have the area where you can write your code.
+- On the right, you can control the simulation.
+
+#### Blockly Functionality
+
+You can write your program using drag and drop in this section. Blockly blocks are categorized for ease of use, and you can drag and drop them into the workspace. After writing your code, you can view its textual version.
+
+#### ScaFi Web Functionality
+
+Once your application is ready, you can load your program by clicking "load." This sends the script to the server, compiles it, and prepares it for execution by the simulator.
+
+With the simulator, you can change and move nodes. Each node also has sensors and actuators that can be turned on and off by selecting the nodes and clicking on "sensor" to change their states.
+
+### Examples
+
+#### Example 1: Gradient
+
+This example demonstrates an aggregate calculation to determine the distance from a source node (with a value set to true) to all other nodes. ScaFi Web Blocks can also change the color of nodes based on a program's output, such as using HSL to color gradients.
+
+#### Example 2: Channel
+
+The channel is a pattern in AC that connects a source area and a destination. This program can be created using ScaFi Web Blocks.
+
+#### Example 3: Basic Movement
+
+Nodes can also be moved using a specific block called "X".
+
+Feel free to experiment with combining blocks and observing the results in the current screen.
+
