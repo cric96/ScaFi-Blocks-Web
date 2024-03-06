@@ -16,6 +16,10 @@ function clearWorkspace() {
 }
 
 function loadWorkspace() {
+    let localStore = localStorage.getItem("scafiBlocklyStore");
+    if(localStore === null) {
+        return;
+    }
     Blockly.serialization.workspaces.load(JSON.parse(localStorage.getItem("scafiBlocklyStore")), Blockly.getMainWorkspace());
 }
 

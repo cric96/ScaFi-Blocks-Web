@@ -77,7 +77,11 @@ object Service {
   )
   lazy val compiledPage: Route = get {
     path(Segment) { id =>
-      complete(HttpEntity(ContentTypes.`text/html(UTF-8)`, ScalaCompiledPage.html(id)))
+      if(codeCache.get(id).isEmpty) {
+        redirect("/", StatusCodes.Found)
+      } else {
+        complete(HttpEntity(ContentTypes.`text/html(UTF-8)`, ScalaCompiledPage.html(id)))
+      }
     }
   }
 
