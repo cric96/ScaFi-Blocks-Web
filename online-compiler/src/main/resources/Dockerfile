@@ -1,5 +1,5 @@
 # Alpine Linux with OpenJDK JRE
-FROM java:8
+FROM amazoncorretto:8
 # copy WAR into image
 COPY ./online-compiler.jar /online-compiler.jar 
 # run application with this command line
