@@ -125,14 +125,6 @@ object Service {
     val allRoutes = Seq(index, jsCode, compiledPage, fullCode, easyCode, pureCodeRequest) ++ resourceLike
     val cors = new CORSHandler {}
     val route = cors.corsHandler(concat(allRoutes: _*))
-    val server = Http().newServerAt(host, port).bind(route)
-    // Close the server when it receive enter
-    StdIn.readLine()
-    // Unbind from the port and shut down when done
-    val end = server
-      .flatMap(_.unbind())
-      .flatMap(_ => system.terminate())
-    // Waits the end
-    Await.result(end, Duration.Inf)
+    Http().newServerAt(host, port).bind(route)
   }
 }
