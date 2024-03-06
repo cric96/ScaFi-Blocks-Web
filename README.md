@@ -2,10 +2,13 @@
 
 ## Overview
 
-ScaFi Web Blocks is an online playground designed to facilitate agile experimentation with ScaFi using block programming. ScaFi itself is a framework that enables the writing of aggregated code in an intuitive and agile manner. This platform aims to lower the learning curve for mastering this programming paradigm by leveraging block programming, particularly Blockly.
+ScaFi Web Blocks is an online playground designed to facilitate agile experimentation with ScaFi using block programming. 
+[ScaFi](https://scafi.github.io/) itself is a framework that enables the writing of aggregated code in an intuitive and agile manner. 
+This new platform aims to lower the learning curve for mastering this programming paradigm by leveraging block programming, 
+For this system, we select [Blockly](https://developers.google.com/blockly).
 
 The project consists of two main parts:
-- A web page, which includes ScaFi Web and ScaFi Blocks for more detailed information.
+- A web page, which includes [ScaFi Web](https://github.com/scafi/scafi-web) as the engine to execute ScaFi program on the web and [ScaFi Blocks](https://github.com/cric96/ScaFi-Blocks) to enable low-code programming for aggregate computing.
 - A remote compilation service that translates ScaFi code into executable JavaScript.
 
 ## Getting Started
