@@ -103,29 +103,6 @@ object SkeletonPage {
         cls := "dropdown-menu bg-dark p-2 text-white",
         visualizationConfigDropdown
       )
-    ),
-    a(
-      cls := "btn btn-outline-light mr-2 my-sm-0",
-      href := "https://scafi.github.io/",
-      target := "_blank",
-      rel := "noopener noreferrer",
-      i(cls := "fas fa-globe fa-lg pr-2", aria.hidden := true),
-      "Website"
-    ),
-    a(
-      cls := "btn btn-outline-light my-2 my-sm-0",
-      href := "https://github.com/scafi/scafi",
-      target := "_blank",
-      rel := "noopener noreferrer",
-      i(cls := "fab fa-github fa-lg pr-2", aria.hidden := true),
-      "Repository"
-    ),
-    a(
-      cls := "btn btn-outline-light ml-2 my-sm-0",
-      href := "https://youtu.be/E-EoFmm5tuc",
-      target := "_blank",
-      rel := "noopener noreferrer",
-      i(cls := "fab fa-youtube fa-lg", aria.hidden := true)
     )
   ).render
 
@@ -142,7 +119,7 @@ object SkeletonPage {
 
   private def navBar: Tag = tag("nav")(
     cls := "navbar navbar-dark flex-shrink-0 bg-secondary",
-    span(cls := "navbar-brand", h1(cls := "text-light", "Scafi")),
+    span(cls := "navbar-brand", h1(cls := "text-light font-weight-bold", "ScaFi-Blocks")),
     span(cls := "navbar-text ml-2", "Discover the power of the collective"),
     navRightSide
   )
