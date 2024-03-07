@@ -22,7 +22,7 @@ There are two ways to launch the project: by compiling and running it locally or
 To run the project using Docker, execute the following command:
 
 ```
-docker run -d -p 8080:8080 gianlucaaguzzi:scafi-blocks:0.0.3
+docker run -d -p 8080:8080 gianlucaaguzzi:scafi-blocks:0.0.4
 ```
 Now, you should be able to access the project's main page at [http://localhost:8080](http://localhost:8080).
 
