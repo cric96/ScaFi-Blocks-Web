@@ -13,6 +13,9 @@ jobs:
       # Checkout the repository
       - name: Checkout
         uses: actions/checkout@v3.0.2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 16
       - name: Setup Scala with Java ${{ matrix.jvm_version }}
         uses: olafurpg/setup-scala@v11
         with:
