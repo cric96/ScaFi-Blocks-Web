@@ -1,4 +1,4 @@
-# ScaFi Web Blocks README
+# ScaFi Web Blocks
 
 ## Overview
 
