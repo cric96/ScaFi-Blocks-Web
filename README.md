@@ -24,7 +24,7 @@ To run the project using Docker, execute the following command:
 ```
 docker run -d -p 8080:8080 gianlucaaguzzi:scafi-blocks:0.0.3
 ```
-Now, you should be able to access the project's main page at `http://localhost:8080`.
+Now, you should be able to access the project's main page at [http://localhost:8080](http://localhost:8080).
 
 #### Using SBT
 
@@ -40,7 +40,7 @@ sbt runService
 ```
 
 This command compiles the system, producing the web page and the compilation server.
-After the compilation is complete, you should be able to access the project's main page at `http://localhost:8080`.
+After the compilation is complete, you should be able to access the project's main page at [http://localhost:8080](http://localhost:8080).
 
 You should see the following screen:
 
