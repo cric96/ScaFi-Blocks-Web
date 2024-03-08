@@ -13,6 +13,13 @@ The project consists of two main parts:
 
 ## Getting Started
 
+In the following sections, we will guide you through the process of setting up and using ScaFi Web Blocks.
+
+### Prerequisites
+- [Docker](https://www.docker.com/) (version 25.0.2)
+- [Node.js](https://nodejs.org/en/) (version 16.0.0)
+- [JDK](https://www.oracle.com/java/technologies/javase-jdk8-downloads.html) (version 8)
+
 ### Launching the Project
 
 There are two ways to launch the project: by compiling and running it locally or by using Docker. We recommend the latter for ease of setup.
@@ -28,11 +35,7 @@ Now, you should be able to access the project's main page at [http://localhost:8
 
 #### Using SBT
 
-If you prefer to compile the project locally, ensure you have the following requirements:
-
-- Node 16
-- JDK 8
-
+If you implement changes to the project, you can compile and run it locally using SBT.
 Then, execute the following command in your terminal:
 
 ```
